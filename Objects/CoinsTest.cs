@@ -9,28 +9,9 @@ namespace  Coins
     [Fact]
     public void TestCoinsGetQuartersYea()
     {
-      Coin newCoins = new Coin(0.23);
-      Assert.Equal(0, newCoins.GetQuarters());
-    }
-    [Fact]
-    public void TestCoinsGetDimesYea()
-    {
       Coin newCoins = new Coin(1.80);
-      Assert.Equal(18, newCoins.GetDimes());
+      Assert.Equal(7, newCoins.GetChangeCount(.25));
     }
-    [Fact]
-    public void TestCoinsGetNickelsYea()
-    {
-      Coin newCoins = new Coin(1.80);
-      Assert.Equal(36, newCoins.GetNickels());
-    }
-    [Fact]
-    public void TestCoinsGetPenniesYea()
-    {
-      Coin newCoins = new Coin(1.80);
-      Assert.Equal(180, newCoins.GetPennies());
-    }
-
 
     [Fact]
     public void TestGetChange()
