@@ -11,7 +11,6 @@ namespace Coins
   public class Coin
   {
     private double _change;
-    public static Dictionary<string,int> _changeResults = new Dictionary<string,int> ();
     public static Dictionary<string,double> _myAmounts = new Dictionary<string,double>
     {
       {"Quarters",.25},
@@ -28,6 +27,7 @@ namespace Coins
 
     public Dictionary<string,int> GetChange()
     {
+     Dictionary<string,int> _changeResults = new Dictionary<string,int> ();
       foreach(KeyValuePair<string, double> entry in _myAmounts)
       {
           double amountTotal = GetChangeCount(entry.Value) * entry.Value;
@@ -36,7 +36,7 @@ namespace Coins
       }
       return _changeResults;
     }
-    
+
     public int GetChangeCount(double amount)
     {
       return (int)Math.Floor(_change/amount);

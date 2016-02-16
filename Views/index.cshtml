@@ -5,10 +5,9 @@
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
   </head>
   <body>
-    <h1>Enter a Word to check if it's an anagram.</h1>
+    <h1>How much money do you need change for?</h1>
     <form action="/" method="post">
-      <input type="text" name="word" value=""> Enter a Word
-      <input type="text" name="listWords" value=""> Enter a list of Words
+      <input type="double" name="input" value=""> Enter an amount
       <button type="submit" name="button">PRESS THIS</button>
     </form>
     <h2>A list of words maybe:</h2>
@@ -16,9 +15,9 @@
       @{
         if(Model!=null)
         {
-          foreach(var word in Model)
+          foreach(var entry in Model)
           {
-            <li>@word</li>
+            <li>@entry</li>
           }
         }
       }
